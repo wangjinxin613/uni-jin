@@ -1,0 +1,15 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "uni-app",
+  "titleNView": {
+    "buttons": [
+      {
+        "type": "none",
+        "text": "发布",
+        "color": "red",
+        "float": "right",
+        "fontSize": "14px"
+      }
+    ]
+  }
+}
