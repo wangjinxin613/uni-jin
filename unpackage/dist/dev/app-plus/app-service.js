@@ -1114,22 +1114,19 @@ __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./common/slots.wxml','/components/wjx-edit/wjx-edit.vue.wxml','./components/uni-edit/uni-edit.vue.wxml','./components/wjx-edit/wjx-edit.vue.wxml','./pages/index/index.vue.wxml','./pages/index/index.wxml','./index.vue.wxml'];d_[x[0]]={}
+var x=['./common/slots.wxml','./components/uni-edit/uni-edit.vue.wxml','./components/wjx-edit/wjx-edit.vue.wxml','./pages/index/index.vue.wxml','/components/wjx-edit/wjx-edit.vue.wxml','./pages/index/index.wxml','./index.vue.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
-var oB=e_[x[0]].i
-_ai(oB,x[1],e_,x[0],1,1)
-oB.pop()
 return r
 }
-e_[x[0]]={f:m0,j:[],i:[],ti:[x[1]],ic:[]}
-d_[x[2]]={}
-d_[x[2]]["6cc485a5"]=function(e,s,r,gg){
+e_[x[0]]={f:m0,j:[],i:[],ti:[],ic:[]}
+d_[x[1]]={}
+d_[x[1]]["6cc485a5"]=function(e,s,r,gg){
 var z=gz$gwx_2()
-var b=x[2]+':6cc485a5'
+var b=x[1]+':6cc485a5'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-edit/uni-edit.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[2]);return}
+if(p_[b]){_wl(b,x[1]);return}
 p_[b]=true
 try{
 var oB=_v()
@@ -1168,14 +1165,14 @@ var m1=function(e,s,r,gg){
 var z=gz$gwx_2()
 return r
 }
-e_[x[2]]={f:m1,j:[],i:[],ti:[],ic:[]}
-d_[x[3]]={}
-d_[x[3]]["3d23bbf6"]=function(e,s,r,gg){
+e_[x[1]]={f:m1,j:[],i:[],ti:[],ic:[]}
+d_[x[2]]={}
+d_[x[2]]["3d23bbf6"]=function(e,s,r,gg){
 var z=gz$gwx_3()
-var b=x[3]+':3d23bbf6'
+var b=x[2]+':3d23bbf6'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/wjx-edit/wjx-edit.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[3]);return}
+if(p_[b]){_wl(b,x[2]);return}
 p_[b]=true
 try{
 var oB=_v()
@@ -1214,21 +1211,21 @@ var m2=function(e,s,r,gg){
 var z=gz$gwx_3()
 return r
 }
-e_[x[3]]={f:m2,j:[],i:[],ti:[],ic:[]}
-d_[x[4]]={}
-d_[x[4]]["fdfd28ca"]=function(e,s,r,gg){
+e_[x[2]]={f:m2,j:[],i:[],ti:[],ic:[]}
+d_[x[3]]={}
+d_[x[3]]["fdfd28ca"]=function(e,s,r,gg){
 var z=gz$gwx_4()
-var b=x[4]+':fdfd28ca'
+var b=x[3]+':fdfd28ca'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/index/index.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[4]);return}
+if(p_[b]){_wl(b,x[3]);return}
 p_[b]=true
 try{
 var oB=_v()
 _(r,oB)
 cs.push("./pages/index/index.vue.wxml:template:1:119")
 var xC=_oz(z,2,e,s,gg)
-var oD=_gd(x[4],xC,e_,d_)
+var oD=_gd(x[3],xC,e_,d_)
 if(oD){
 var fE=_1z(z,1,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1236,7 +1233,7 @@ oB.wxXCkey=3
 oD(fE,fE,oB,gg)
 gg.f=cur_globalf
 }
-else _w(xC,x[4],1,251)
+else _w(xC,x[3],1,251)
 cs.pop()
 }catch(err){
 p_[b]=false
@@ -1247,32 +1244,32 @@ return r
 }
 var m3=function(e,s,r,gg){
 var z=gz$gwx_4()
-var cF=e_[x[4]].i
-_ai(cF,x[1],e_,x[4],1,1)
-cF.pop()
+var fE=e_[x[3]].i
+_ai(fE,x[4],e_,x[3],1,1)
+fE.pop()
 return r
 }
-e_[x[4]]={f:m3,j:[],i:[],ti:[x[1]],ic:[]}
+e_[x[3]]={f:m3,j:[],i:[],ti:[x[4]],ic:[]}
 d_[x[5]]={}
 var m4=function(e,s,r,gg){
 var z=gz$gwx_5()
-var oH=e_[x[5]].i
-_ai(oH,x[6],e_,x[5],1,1)
-var cI=_v()
-_(r,cI)
+var hG=e_[x[5]].i
+_ai(hG,x[6],e_,x[5],1,1)
+var oH=_v()
+_(r,oH)
 cs.push("./pages/index/index.wxml:template:2:6")
-var oJ=_oz(z,1,e,s,gg)
-var lK=_gd(x[5],oJ,e_,d_)
-if(lK){
-var aL=_1z(z,0,e,s,gg) || {}
+var cI=_oz(z,1,e,s,gg)
+var oJ=_gd(x[5],cI,e_,d_)
+if(oJ){
+var lK=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
-cI.wxXCkey=3
-lK(aL,aL,cI,gg)
+oH.wxXCkey=3
+oJ(lK,lK,oH,gg)
 gg.f=cur_globalf
 }
-else _w(oJ,x[5],2,18)
+else _w(cI,x[5],2,18)
 cs.pop()
-oH.pop()
+hG.pop()
 return r
 }
 e_[x[5]]={f:m4,j:[],i:[],ti:[x[6]],ic:[]}
@@ -1667,7 +1664,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=F:/gs/wjx-uni/com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\", style: { height: _vm.pageHeight + \"px\" } },\n    [\n      _c(\n        \"view\",\n        { staticClass: \"edit\" },\n        _vm._l(_vm.editItems, function(item, index) {\n          return _c(\"block\", { key: index }, [\n            item.type == \"textarea\"\n              ? _c(\"textarea\", {\n                  attrs: {\n                    placeholder: _vm.editItems.length == 1 ? _vm.placeText : \"\",\n                    maxlength: \"-1\",\n                    \"auto-height\": \"true\",\n                    \"cursor-spacing\": \"500\",\n                    \"data-index\": index,\n                    focus:\n                      index + 1 == _vm.editItems.length && index != 0\n                        ? true\n                        : false,\n                    value: item.value,\n                    eventid: \"3d23bbf6-0-\" + index\n                  },\n                  on: {\n                    input: _vm.inputIng,\n                    linechange: _vm.linechage,\n                    focus: _vm.focus\n                  }\n                })\n              : _vm._e(),\n            item.type == \"img\"\n              ? _c(\n                  \"view\",\n                  { staticClass: \"img\" },\n                  [\n                    _c(\"image\", {\n                      attrs: { src: item.value, mode: \"widthFix\" }\n                    }),\n                    _c(\"view\", {\n                      staticClass: \"mask\",\n                      style: { opacity: item.progress != 100 ? \"1\" : \"0.5\" }\n                    }),\n                    _c(\"image\", {\n                      staticClass: \"del\",\n                      attrs: {\n                        src: \"../../static/uni-edit/shanchu.png\",\n                        \"data-index\": index,\n                        mode: \"widthFix\",\n                        eventid: \"3d23bbf6-1-\" + index\n                      },\n                      on: { click: _vm.delImg }\n                    }),\n                    _c(\"progress\", {\n                      attrs: {\n                        percent: item.progress,\n                        active: \"\",\n                        \"stroke-width\": \"3\"\n                      }\n                    })\n                  ],\n                  1\n                )\n              : _vm._e()\n          ])\n        })\n      ),\n      _c(\"view\", { staticClass: \"edit-tools-flex\" }),\n      _c(\"view\", { staticClass: \"edit-tools\" }, [\n        _c(\n          \"view\",\n          {\n            staticClass: \"single\",\n            attrs: { eventid: \"3d23bbf6-2\" },\n            on: { tap: _vm.insertImg }\n          },\n          [\n            _c(\"image\", {\n              attrs: {\n                src: \"../../static/uni-edit/tupian.png\",\n                mode: \"widthFix\"\n              }\n            }),\n            _c(\"text\", [_vm._v(\"插入图片\")])\n          ]\n        ),\n        _c(\"view\", { staticClass: \"location\" }, [\n          _c(\"image\", {\n            attrs: {\n              src: \"../../static/uni-edit/dingwei.png\",\n              mode: \"widthFix\"\n            }\n          }),\n          _c(\"view\", { staticClass: \"city\" }, [\n            _vm._v(_vm._s(_vm.locationCity))\n          ])\n        ])\n      ])\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=F:/gs/wjx-uni/components/wjx-edit/wjx-edit.vue?vue&type=template&id=6a1992b3&scoped=true&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\", style: { height: _vm.pageHeight + \"px\" } },\n    [\n      _c(\n        \"view\",\n        { staticClass: \"edit\" },\n        _vm._l(_vm.editItems, function(item, index) {\n          return _c(\"block\", { key: index }, [\n            item.type == \"textarea\"\n              ? _c(\"textarea\", {\n                  attrs: {\n                    placeholder: _vm.editItems.length == 1 ? _vm.placeText : \"\",\n                    maxlength: \"-1\",\n                    \"auto-height\": \"true\",\n                    \"cursor-spacing\": \"500\",\n                    \"data-index\": index,\n                    focus:\n                      index + 1 == _vm.editItems.length && index != 0\n                        ? true\n                        : false,\n                    value: item.value,\n                    eventid: \"3d23bbf6-0-\" + index\n                  },\n                  on: {\n                    input: _vm.inputIng,\n                    linechange: _vm.linechage,\n                    focus: _vm.focus\n                  }\n                })\n              : _vm._e(),\n            item.type == \"img\"\n              ? _c(\n                  \"view\",\n                  { staticClass: \"img\" },\n                  [\n                    _c(\"image\", {\n                      attrs: { src: item.value, mode: \"widthFix\" }\n                    }),\n                    _c(\"view\", {\n                      staticClass: \"mask\",\n                      style: { opacity: item.progress != 100 ? \"1\" : \"0.5\" }\n                    }),\n                    _c(\"image\", {\n                      staticClass: \"del\",\n                      attrs: {\n                        src: \"../../static/wjx-edit/shanchu.png\",\n                        \"data-index\": index,\n                        mode: \"widthFix\",\n                        eventid: \"3d23bbf6-1-\" + index\n                      },\n                      on: { click: _vm.delImg }\n                    }),\n                    _c(\"progress\", {\n                      attrs: {\n                        percent: item.progress,\n                        active: \"\",\n                        \"stroke-width\": \"3\"\n                      }\n                    })\n                  ],\n                  1\n                )\n              : _vm._e()\n          ])\n        })\n      ),\n      _c(\"view\", { staticClass: \"edit-tools-flex\" }),\n      _c(\"view\", { staticClass: \"edit-tools\" }, [\n        _c(\n          \"view\",\n          {\n            staticClass: \"single\",\n            attrs: { eventid: \"3d23bbf6-2\" },\n            on: { tap: _vm.insertImg }\n          },\n          [\n            _c(\"image\", {\n              attrs: {\n                src: \"../../static/wjx-edit/tupian.png\",\n                mode: \"widthFix\"\n              }\n            }),\n            _c(\"text\", [_vm._v(\"插入图片\")])\n          ]\n        ),\n        _c(\"view\", { staticClass: \"location\" }, [\n          _c(\"image\", {\n            attrs: {\n              src: \"../../static/wjx-edit/dingwei.png\",\n              mode: \"widthFix\"\n            }\n          }),\n          _c(\"view\", { staticClass: \"city\" }, [\n            _vm._v(_vm._s(_vm.locationCity))\n          ])\n        ])\n      ])\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=F:/gs/wjx-uni/components/wjx-edit/wjx-edit.vue?vue&type=template&id=6a1992b3&scoped=true&");
 
 /***/ }),
 

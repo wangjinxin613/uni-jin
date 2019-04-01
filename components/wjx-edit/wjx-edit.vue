@@ -8,7 +8,7 @@
 				<view class="img" v-if="item.type=='img'" > 
 					<image :src="item.value" mode="widthFix"/>
 					<view class="mask" :style="{opacity:item.progress != 100 ? '1' : '0.5'}"></view>
-					<image src="../../static/uni-edit/shanchu.png" class="del" :data-index="index" mode="widthFix" @click="delImg"/>
+					<image src="../../static/wjx-edit/shanchu.png" class="del" :data-index="index" mode="widthFix" @click="delImg"/>
 					<progress :percent="item.progress" active stroke-width="3" />				
 				</view>
 			</block> 
@@ -19,11 +19,11 @@
 		<view class="edit-tools">
 			
 			<view class="single" @tap="insertImg">
-				<image src="../../static/uni-edit/tupian.png" mode="widthFix"/>
+				<image src="../../static/wjx-edit/tupian.png" mode="widthFix"/>
 				<text>插入图片</text>
 			</view>
 			<view class="location" >
-				<image src="../../static/uni-edit/dingwei.png" mode="widthFix"/>
+				<image src="../../static/wjx-edit/dingwei.png" mode="widthFix"/>
 				<view class="city">{{locationCity}}</view>
 			</view>
 		</view>
