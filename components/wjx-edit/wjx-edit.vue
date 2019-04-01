@@ -64,6 +64,7 @@ export default {
 					value:''
 				}
 			],
+			
 			locationCity:"北京",
 			content:[]
 		};

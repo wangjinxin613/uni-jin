@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import edit from '../../components/uni-edit/uni-edit.vue';
+	import edit from '../../components/wjx-edit/wjx-edit.vue';
 	export default {
 		data() {
 			return {
