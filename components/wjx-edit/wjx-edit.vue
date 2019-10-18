@@ -4,7 +4,7 @@
 		<!-- 编辑区域 -->
 		<view class="edit">
 			<block  v-for="(item,index) in editItems" :key="index">
-				<textarea :placeholder="editItems.length == 1 ? placeText : ''" maxlength="-1" auto-height="true" cursor-spacing="500" :data-index="index" @input="inputIng" @linechange="linechage" @focus="focus" v-if="item.type=='textarea'" :focus="index + 1 == editItems.length && index != 0 ? true : false" :value="item.value"></textarea> 
+				<textarea :placeholder="editItems.length == 1 ? placeText : ''" maxlength="-1" auto-height="true" cursor-spacing="500" :data-index="index" @input="inputIng" @linechange="linechage" v-if="item.type=='textarea'" :focus="index + 1 == editItems.length && index != 0 ? true : false" :value="item.value"></textarea> 
 				<view class="img" v-if="item.type=='img'" > 
 					<image :src="item.value" mode="widthFix"/>
 					<view class="mask" :style="{opacity:item.progress != 100 ? '1' : '0.5'}"></view>
@@ -153,7 +153,7 @@ export default {
 						value:''
 					})
 					
-					plus.key.showSoftKeybord(); //显示软键盘
+					//plus.key.showSoftKeybord(); //显示软键盘
 					
 					uni.pageScrollTo({
 						scrollTop: 10000000,

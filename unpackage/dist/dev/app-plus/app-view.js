@@ -11,7 +11,7 @@ var __WXML_GLOBAL__ = {
 };
 var $gwx;
 
-/*v0.5vv_20181116_syb_scopedata*/window.__wcc_version__='v0.5vv_20181116_syb_scopedata';window.__wcc_version_info__={"customComponents":true,"fixZeroRpx":true,"propValueDeepCopy":false};
+/*v0.5vv_20190312_syb_scopedata*/window.__wcc_version__='v0.5vv_20190312_syb_scopedata';window.__wcc_version_info__={"customComponents":true,"fixZeroRpx":true,"propValueDeepCopy":false};
 var $gwxc
 var $gaic={}
 $gwx=function(path,global){
@@ -651,34 +651,32 @@ return false;
 function _da( node, attrname, opindex, raw, o )
 {
 var isaffected = false;
+var value = $gdc( raw, "", 2 );
+if ( o.ap && value && value.constructor===Function ) 
+{
+attrname = "$wxs:" + attrname; 
+node.attr["$gdc"] = $gdc;
+}
 if ( o.is_affected || _ca(raw) ) 
 {
 node.n.push( attrname );
 node.raw[attrname] = raw;
-var value = $gdc( raw, "", 2 );
-return value;
 }
-else
-{
-var value = $gdc( raw, "", 2 );
-return value;
-}
+node.attr[attrname] = value;
 }
 function _r( node, attrname, opindex, env, scope, global ) 
 {
 global.opindex=opindex;
 var o = {}, _env;
 var a = grb( z[opindex], env, scope, global, o );
-a = _da( node, attrname, opindex, a, o );
-node.attr[attrname] = a;
+_da( node, attrname, opindex, a, o );
 }
 function _rz( z, node, attrname, opindex, env, scope, global ) 
 {
 global.opindex=opindex;
 var o = {}, _env;
 var a = grb( z[opindex], env, scope, global, o );
-a = _da( node, attrname, opindex, a, o );
-node.attr[attrname] = a;
+_da( node, attrname, opindex, a, o );
 }
 function _o( opindex, env, scope, global )
 {
@@ -1055,7 +1053,6 @@ if(typeof(global.defines)==='undefined')global.defines={};d_=global.defines;
 var f_={}
 if(typeof(global.modules)==='undefined')global.modules={};f_=global.modules || {};
 var p_={}
-var cs
 __WXML_GLOBAL__.ops_cached = __WXML_GLOBAL__.ops_cached || {}
 __WXML_GLOBAL__.ops_set = __WXML_GLOBAL__.ops_set || {};
 __WXML_GLOBAL__.ops_init = __WXML_GLOBAL__.ops_init || {};
@@ -1064,68 +1061,113 @@ function gz$gwx_1(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_1)return __WXML_GLOBAL__.ops_cached.$gwx_1
 __WXML_GLOBAL__.ops_cached.$gwx_1=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'data-v-73428cf8'])
+Z([3,'imgs data-v-73428cf8'])
+Z([3,'key'])
+Z([3,'item'])
+Z([[7],[3,'list']])
+Z(z[2])
+Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'image']])
+Z([3,'single data-v-73428cf8'])
+Z([3,'__e'])
+Z(z[0])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'previewImg']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[[5],[1,'list']],[1,'']],[[7],[3,'key']]],[1,'url']]]]]]]]]]]]]]])
+Z([3,'aspectFit'])
+Z([[6],[[7],[3,'item']],[3,'url']])
+Z([[2,'&&'],[[2,'=='],[[7],[3,'mode']],[1,'create']],[[7],[3,'showProcess']]])
+Z([3,'#67C23A'])
+Z([[2,'?:'],[[2,'||'],[[2,'=='],[[6],[[7],[3,'item']],[3,'process']],[1,100]],[[2,'=='],[[6],[[7],[3,'item']],[3,'process']],[1,undefined]]],[1,'#67C23A'],[1,'#F56C6C']])
+Z(z[0])
+Z([[6],[[7],[3,'item']],[3,'process']])
+Z([3,'3'])
+Z(z[8])
+Z([3,'del data-v-73428cf8'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'deleteItem']],[[4],[[5],[[7],[3,'key']]]]]]]]]]]])
+Z([3,'×'])
+Z(z[2])
+Z(z[3])
+Z(z[4])
+Z(z[2])
+Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'file']])
+Z([3,'file data-v-73428cf8'])
+Z(z[8])
+Z(z[8])
+Z([3,'noImg data-v-73428cf8'])
+Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'downLoad']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[[5],[1,'list']],[1,'']],[[7],[3,'key']]],[1,'url']]]]]]]]]]]]]],[[4],[[5],[[5],[1,'longpress']],[[4],[[5],[[4],[[5],[[5],[1,'deleteItem']],[[4],[[5],[[7],[3,'key']]]]]]]]]]]])
+Z([a,[[6],[[7],[3,'item']],[3,'fileName']]])
+Z(z[13])
+Z(z[14])
+Z(z[15])
+Z(z[0])
+Z(z[17])
+Z(z[18])
+Z(z[8])
+Z(z[20])
+Z(z[21])
+Z(z[22])
+Z([[2,'=='],[[7],[3,'mode']],[1,'create']])
+Z(z[8])
+Z([3,'single addNew data-v-73428cf8'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'chooseFile']],[[4],[[5],[1,'$event']]]]]]]]]]])
+Z([3,'cuIcon-add data-v-73428cf8'])
+Z([3,'+'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_1);return __WXML_GLOBAL__.ops_cached.$gwx_1
 }
 function gz$gwx_2(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_2)return __WXML_GLOBAL__.ops_cached.$gwx_2
 __WXML_GLOBAL__.ops_cached.$gwx_2=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'6cc485a5'])
-Z([3,'_view data-v-5355b35a content'])
-Z([a,[3,' '],[[2,'+'],[[2,'+'],[1,'height:'],[[2,'+'],[[7],[3,'pageHeight']],[1,'px']]],[1,';']]])
-Z([3,'_view data-v-5355b35a edit'])
+Z([3,'content data-v-8c389fd0'])
+Z([[2,'+'],[[2,'+'],[1,'height:'],[[2,'+'],[[7],[3,'pageHeight']],[1,'px']]],[1,';']])
+Z([3,'edit data-v-8c389fd0'])
 Z([3,'index'])
 Z([3,'item'])
 Z([[7],[3,'editItems']])
-Z(z[4])
-Z([[7],[3,'index']])
+Z(z[3])
+Z([3,'data-v-8c389fd0'])
 Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'textarea']])
 Z([3,'true'])
-Z([3,'handleProxy'])
-Z(z[11])
-Z(z[11])
-Z([3,'_textarea data-v-5355b35a'])
+Z([3,'__e'])
+Z(z[10])
+Z(z[7])
 Z([3,'500'])
-Z([[7],[3,'$k']])
-Z([[2,'+'],[1,'6cc485a5-0-'],[[7],[3,'index']]])
-Z(z[8])
+Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'input']],[[4],[[5],[[4],[[5],[[5],[1,'inputIng']],[[4],[[5],[1,'$event']]]]]]]]]],[[4],[[5],[[5],[1,'linechange']],[[4],[[5],[[4],[[5],[[5],[1,'linechage']],[[4],[[5],[1,'$event']]]]]]]]]]])
+Z([[7],[3,'index']])
 Z([[2,'?:'],[[2,'&&'],[[2,'=='],[[2,'+'],[[7],[3,'index']],[1,1]],[[6],[[7],[3,'editItems']],[3,'length']]],[[2,'!='],[[7],[3,'index']],[1,0]]],[1,true],[1,false]])
 Z([3,'-1'])
 Z([[2,'?:'],[[2,'=='],[[6],[[7],[3,'editItems']],[3,'length']],[1,1]],[[7],[3,'placeText']],[1,'']])
 Z([[6],[[7],[3,'item']],[3,'value']])
 Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'img']])
-Z([3,'_view data-v-5355b35a img'])
-Z([3,'_image data-v-5355b35a'])
+Z([3,'img data-v-8c389fd0'])
+Z(z[7])
 Z([3,'widthFix'])
-Z(z[22])
-Z([3,'_view data-v-5355b35a mask'])
-Z([a,z[2][1],[[2,'+'],[[2,'+'],[1,'opacity:'],[[2,'?:'],[[2,'!='],[[6],[[7],[3,'item']],[3,'progress']],[1,100]],[1,'1'],[1,'0.5']]],[1,';']]])
-Z(z[11])
-Z([3,'_image data-v-5355b35a del'])
-Z(z[16])
-Z([[2,'+'],[1,'6cc485a5-1-'],[[7],[3,'index']]])
-Z(z[8])
-Z(z[26])
-Z([3,'../../static/uni-edit/shanchu.png'])
-Z([3,'_progress data-v-5355b35a'])
+Z(z[19])
+Z([3,'mask data-v-8c389fd0'])
+Z([[2,'+'],[[2,'+'],[1,'opacity:'],[[2,'?:'],[[2,'!='],[[6],[[7],[3,'item']],[3,'progress']],[1,100]],[1,'1'],[1,'0.5']]],[1,';']])
+Z(z[10])
+Z([3,'del data-v-8c389fd0'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'delImg']],[[4],[[5],[1,'$event']]]]]]]]]]])
+Z(z[15])
+Z(z[23])
+Z([3,'../../static/wjx-edit/shanchu.png'])
+Z(z[7])
 Z([[6],[[7],[3,'item']],[3,'progress']])
 Z([3,'3'])
-Z([3,'_view data-v-5355b35a edit-tools-flex'])
-Z([3,'_view data-v-5355b35a edit-tools'])
-Z(z[11])
-Z([3,'_view data-v-5355b35a single'])
-Z(z[16])
-Z([1,'6cc485a5-2'])
-Z(z[25])
-Z(z[26])
-Z([3,'../../static/uni-edit/tupian.png'])
-Z([3,'_text data-v-5355b35a'])
+Z([3,'edit-tools-flex data-v-8c389fd0'])
+Z([3,'edit-tools data-v-8c389fd0'])
+Z(z[10])
+Z([3,'single data-v-8c389fd0'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'insertImg']],[[4],[[5],[1,'$event']]]]]]]]]]])
+Z(z[7])
+Z(z[23])
+Z([3,'../../static/wjx-edit/tupian.png'])
+Z(z[7])
 Z([3,'插入图片'])
-Z([3,'_view data-v-5355b35a location'])
-Z(z[25])
-Z(z[26])
-Z([3,'../../static/uni-edit/dingwei.png'])
-Z([3,'_view data-v-5355b35a city'])
+Z([3,'location data-v-8c389fd0'])
+Z(z[7])
+Z(z[23])
+Z([3,'../../static/wjx-edit/dingwei.png'])
+Z([3,'city data-v-8c389fd0'])
 Z([a,[[7],[3,'locationCity']]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_2);return __WXML_GLOBAL__.ops_cached.$gwx_2
 }
@@ -1133,409 +1175,210 @@ function gz$gwx_3(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_3)return __WXML_GLOBAL__.ops_cached.$gwx_3
 __WXML_GLOBAL__.ops_cached.$gwx_3=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'3d23bbf6'])
-Z([3,'_view data-v-6a1992b3 content'])
-Z([a,[3,' '],[[2,'+'],[[2,'+'],[1,'height:'],[[2,'+'],[[7],[3,'pageHeight']],[1,'px']]],[1,';']]])
-Z([3,'_view data-v-6a1992b3 edit'])
-Z([3,'index'])
-Z([3,'item'])
-Z([[7],[3,'editItems']])
-Z(z[4])
-Z([[7],[3,'index']])
-Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'textarea']])
-Z([3,'true'])
-Z([3,'handleProxy'])
-Z(z[11])
-Z(z[11])
-Z([3,'_textarea data-v-6a1992b3'])
-Z([3,'500'])
-Z([[7],[3,'$k']])
-Z([[2,'+'],[1,'3d23bbf6-0-'],[[7],[3,'index']]])
-Z(z[8])
-Z([[2,'?:'],[[2,'&&'],[[2,'=='],[[2,'+'],[[7],[3,'index']],[1,1]],[[6],[[7],[3,'editItems']],[3,'length']]],[[2,'!='],[[7],[3,'index']],[1,0]]],[1,true],[1,false]])
-Z([3,'-1'])
-Z([[2,'?:'],[[2,'=='],[[6],[[7],[3,'editItems']],[3,'length']],[1,1]],[[7],[3,'placeText']],[1,'']])
-Z([[6],[[7],[3,'item']],[3,'value']])
-Z([[2,'=='],[[6],[[7],[3,'item']],[3,'type']],[1,'img']])
-Z([3,'_view data-v-6a1992b3 img'])
-Z([3,'_image data-v-6a1992b3'])
-Z([3,'widthFix'])
-Z(z[22])
-Z([3,'_view data-v-6a1992b3 mask'])
-Z([a,z[2][1],[[2,'+'],[[2,'+'],[1,'opacity:'],[[2,'?:'],[[2,'!='],[[6],[[7],[3,'item']],[3,'progress']],[1,100]],[1,'1'],[1,'0.5']]],[1,';']]])
-Z(z[11])
-Z([3,'_image data-v-6a1992b3 del'])
-Z(z[16])
-Z([[2,'+'],[1,'3d23bbf6-1-'],[[7],[3,'index']]])
-Z(z[8])
-Z(z[26])
-Z([3,'../../static/wjx-edit/shanchu.png'])
-Z([3,'_progress data-v-6a1992b3'])
-Z([[6],[[7],[3,'item']],[3,'progress']])
-Z([3,'3'])
-Z([3,'_view data-v-6a1992b3 edit-tools-flex'])
-Z([3,'_view data-v-6a1992b3 edit-tools'])
-Z(z[11])
-Z([3,'_view data-v-6a1992b3 single'])
-Z(z[16])
-Z([1,'3d23bbf6-2'])
-Z(z[25])
-Z(z[26])
-Z([3,'../../static/wjx-edit/tupian.png'])
-Z([3,'_text data-v-6a1992b3'])
-Z([3,'插入图片'])
-Z([3,'_view data-v-6a1992b3 location'])
-Z(z[25])
-Z(z[26])
-Z([3,'../../static/wjx-edit/dingwei.png'])
-Z([3,'_view data-v-6a1992b3 city'])
-Z([a,[[7],[3,'locationCity']]])
+Z([3,'content'])
+Z([3,'__l'])
+Z([3,'vue-ref'])
+Z([3,'edit'])
+Z([3,'20'])
+Z([3,'写点什么吧...'])
+Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_3);return __WXML_GLOBAL__.ops_cached.$gwx_3
 }
 function gz$gwx_4(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_4)return __WXML_GLOBAL__.ops_cached.$gwx_4
 __WXML_GLOBAL__.ops_cached.$gwx_4=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'fdfd28ca'])
-Z([3,'_view fdfd28ca content'])
-Z([[9],[[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[10],[[6],[[7],[3,'$root']],[[2,'+'],[[7],[3,'$kk']],[1,'fdfd28ca-0']]]]],[[8],'$root',[[7],[3,'$root']]]])
-Z([3,'3d23bbf6'])
-Z([3,'20'])
-Z([3,'写点什么吧...'])
-Z([3,'edit'])
+Z([3,'padding:30rpx;'])
+Z([[7],[3,'attachmentList']])
+Z([3,'__l'])
+Z([3,'__e'])
+Z([1,true])
+Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'^updateAttachmentList']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'__set_sync']],[[4],[[5],[[5],[[5],[1,'$0']],[1,'attachmentList']],[1,'$event']]]],[[4],[[5],[1,'']]]]]]]]]],[[4],[[5],[[5],[1,'^updateAttachmentList']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'__set_sync']],[[4],[[5],[[5],[[5],[1,'$0']],[1,'attachmentList']],[1,'$event']]]],[[4],[[5],[1,'']]]]]]]]]]])
+Z([[7],[3,'header']])
+Z([3,'create'])
+Z(z[4])
+Z([[7],[3,'uploadFileUrl']])
+Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_4);return __WXML_GLOBAL__.ops_cached.$gwx_4
-}
-function gz$gwx_5(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_5)return __WXML_GLOBAL__.ops_cached.$gwx_5
-__WXML_GLOBAL__.ops_cached.$gwx_5=[];
-(function(z){var a=11;function Z(ops){z.push(ops)}
-Z([[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[8],'$root',[[7],[3,'$root']]]])
-Z([3,'fdfd28ca'])
-})(__WXML_GLOBAL__.ops_cached.$gwx_5);return __WXML_GLOBAL__.ops_cached.$gwx_5
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./common/slots.wxml','./components/uni-edit/uni-edit.vue.wxml','./components/wjx-edit/wjx-edit.vue.wxml','./pages/index/index.vue.wxml','/components/wjx-edit/wjx-edit.vue.wxml','./pages/index/index.wxml','./index.vue.wxml'];d_[x[0]]={}
+var x=['./components/jin-attachment/jin-attachment.wxml','./components/wjx-edit/wjx-edit.wxml','./pages/index/index.wxml','./pages/jin-attachment/index.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
+var oB=_n('view')
+_rz(z,oB,'class',0,e,s,gg)
+var xC=_n('view')
+_rz(z,xC,'class',1,e,s,gg)
+var fE=_v()
+_(xC,fE)
+var cF=function(oH,hG,cI,gg){
+var lK=_v()
+_(cI,lK)
+if(_oz(z,6,oH,hG,gg)){lK.wxVkey=1
+var aL=_n('view')
+_rz(z,aL,'class',7,oH,hG,gg)
+var eN=_mz(z,'image',['bindtap',8,'class',1,'data-event-opts',2,'mode',3,'src',4],[],oH,hG,gg)
+_(aL,eN)
+var tM=_v()
+_(aL,tM)
+if(_oz(z,13,oH,hG,gg)){tM.wxVkey=1
+var bO=_mz(z,'progress',['activeColor',14,'backgroundColor',1,'class',2,'percent',3,'strokeWidth',4],[],oH,hG,gg)
+_(tM,bO)
+}
+var oP=_mz(z,'view',['bindtap',19,'class',1,'data-event-opts',2],[],oH,hG,gg)
+var xQ=_oz(z,22,oH,hG,gg)
+_(oP,xQ)
+_(aL,oP)
+tM.wxXCkey=1
+_(lK,aL)
+}
+lK.wxXCkey=1
+return cI
+}
+fE.wxXCkey=2
+_2z(z,4,cF,e,s,gg,fE,'item','key','key')
+var oR=_v()
+_(xC,oR)
+var fS=function(hU,cT,oV,gg){
+var oX=_v()
+_(oV,oX)
+if(_oz(z,27,hU,cT,gg)){oX.wxVkey=1
+var lY=_n('view')
+_rz(z,lY,'class',28,hU,cT,gg)
+var t1=_mz(z,'view',['bindlongpress',29,'bindtap',1,'class',2,'data-event-opts',3],[],hU,cT,gg)
+var e2=_oz(z,33,hU,cT,gg)
+_(t1,e2)
+_(lY,t1)
+var aZ=_v()
+_(lY,aZ)
+if(_oz(z,34,hU,cT,gg)){aZ.wxVkey=1
+var b3=_mz(z,'progress',['activeColor',35,'backgroundColor',1,'class',2,'percent',3,'strokeWidth',4],[],hU,cT,gg)
+_(aZ,b3)
+}
+var o4=_mz(z,'view',['bindtap',40,'class',1,'data-event-opts',2],[],hU,cT,gg)
+var x5=_oz(z,43,hU,cT,gg)
+_(o4,x5)
+_(lY,o4)
+aZ.wxXCkey=1
+_(oX,lY)
+}
+oX.wxXCkey=1
+return oV
+}
+oR.wxXCkey=2
+_2z(z,25,fS,e,s,gg,oR,'item','key','key')
+var oD=_v()
+_(xC,oD)
+if(_oz(z,44,e,s,gg)){oD.wxVkey=1
+var o6=_mz(z,'view',['bindtap',45,'class',1,'data-event-opts',2],[],e,s,gg)
+var f7=_n('text')
+_rz(z,f7,'class',48,e,s,gg)
+var c8=_oz(z,49,e,s,gg)
+_(f7,c8)
+_(o6,f7)
+_(oD,o6)
+}
+oD.wxXCkey=1
+_(oB,xC)
+_(r,oB)
 return r
 }
 e_[x[0]]={f:m0,j:[],i:[],ti:[],ic:[]}
 d_[x[1]]={}
-d_[x[1]]["6cc485a5"]=function(e,s,r,gg){
-var z=gz$gwx_2()
-var b=x[1]+':6cc485a5'
-r.wxVkey=b
-gg.f=$gdc(f_["./components/uni-edit/uni-edit.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[1]);return}
-p_[b]=true
-try{
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:27")
-var oB=_mz(z,'view',['class',1,'style',1],[],e,s,gg)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:124")
-var xC=_n('view')
-_rz(z,xC,'class',3,e,s,gg)
-var oD=_v()
-_(xC,oD)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:block:1:165")
-var fE=function(hG,cF,oH,gg){
-cs.push("./components/uni-edit/uni-edit.vue.wxml:block:1:165")
-var oJ=_v()
-_(oH,oJ)
-if(_oz(z,9,hG,cF,gg)){oJ.wxVkey=1
-cs.push("./components/uni-edit/uni-edit.vue.wxml:textarea:1:266")
-cs.push("./components/uni-edit/uni-edit.vue.wxml:textarea:1:266")
-var aL=_mz(z,'textarea',['autoHeight',10,'bindfocus',1,'bindinput',2,'bindlinechange',3,'class',4,'cursorSpacing',5,'data-comkey',6,'data-eventid',7,'data-index',8,'focus',9,'maxlength',10,'placeholder',11,'value',12],[],hG,cF,gg)
-cs.pop()
-_(oJ,aL)
-cs.pop()
-}
-var lK=_v()
-_(oH,lK)
-if(_oz(z,23,hG,cF,gg)){lK.wxVkey=1
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:712")
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:712")
-var tM=_n('view')
-_rz(z,tM,'class',24,hG,cF,gg)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:image:1:781")
-var eN=_mz(z,'image',['class',25,'mode',1,'src',2],[],hG,cF,gg)
-cs.pop()
-_(tM,eN)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:864")
-var bO=_mz(z,'view',['class',28,'style',1],[],hG,cF,gg)
-cs.pop()
-_(tM,bO)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:image:1:983")
-var oP=_mz(z,'image',['bindtap',30,'class',1,'data-comkey',2,'data-eventid',3,'data-index',4,'mode',5,'src',6],[],hG,cF,gg)
-cs.pop()
-_(tM,oP)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:progress:1:1194")
-var xQ=_mz(z,'progress',['active',-1,'class',37,'percent',1,'strokeWidth',2],[],hG,cF,gg)
-cs.pop()
-_(tM,xQ)
-cs.pop()
-_(lK,tM)
-cs.pop()
-}
-oJ.wxXCkey=1
-lK.wxXCkey=1
-cs.pop()
-return oH
-}
-oD.wxXCkey=2
-_2z(z,6,fE,e,s,gg,oD,'item','index','index')
-cs.pop()
-cs.pop()
-_(oB,xC)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:1314")
-var oR=_n('view')
-_rz(z,oR,'class',40,e,s,gg)
-cs.pop()
-_(oB,oR)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:1373")
-var fS=_n('view')
-_rz(z,fS,'class',41,e,s,gg)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:1420")
-var cT=_mz(z,'view',['bindtap',42,'class',1,'data-comkey',2,'data-eventid',3],[],e,s,gg)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:image:1:1538")
-var hU=_mz(z,'image',['class',46,'mode',1,'src',2],[],e,s,gg)
-cs.pop()
-_(cT,hU)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:text:1:1639")
-var oV=_n('text')
-_rz(z,oV,'class',49,e,s,gg)
-var cW=_oz(z,50,e,s,gg)
-_(oV,cW)
-cs.pop()
-_(cT,oV)
-cs.pop()
-_(fS,cT)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:1701")
-var oX=_n('view')
-_rz(z,oX,'class',51,e,s,gg)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:image:1:1746")
-var lY=_mz(z,'image',['class',52,'mode',1,'src',2],[],e,s,gg)
-cs.pop()
-_(oX,lY)
-cs.push("./components/uni-edit/uni-edit.vue.wxml:view:1:1848")
-var aZ=_n('view')
-_rz(z,aZ,'class',55,e,s,gg)
-var t1=_oz(z,56,e,s,gg)
-_(aZ,t1)
-cs.pop()
-_(oX,aZ)
-cs.pop()
-_(fS,oX)
-cs.pop()
-_(oB,fS)
-cs.pop()
-_(r,oB)
-}catch(err){
-p_[b]=false
-throw err
-}
-p_[b]=false
-return r
-}
 var m1=function(e,s,r,gg){
 var z=gz$gwx_2()
+var o0=_mz(z,'view',['class',0,'style',1],[],e,s,gg)
+var cAB=_n('view')
+_rz(z,cAB,'class',2,e,s,gg)
+var oBB=_v()
+_(cAB,oBB)
+var lCB=function(tEB,aDB,eFB,gg){
+var oHB=_v()
+_(eFB,oHB)
+if(_oz(z,8,tEB,aDB,gg)){oHB.wxVkey=1
+var oJB=_mz(z,'textarea',['autoHeight',9,'bindinput',1,'bindlinechange',2,'class',3,'cursorSpacing',4,'data-event-opts',5,'data-index',6,'focus',7,'maxlength',8,'placeholder',9,'value',10],[],tEB,aDB,gg)
+_(oHB,oJB)
+}
+var xIB=_v()
+_(eFB,xIB)
+if(_oz(z,20,tEB,aDB,gg)){xIB.wxVkey=1
+var fKB=_n('view')
+_rz(z,fKB,'class',21,tEB,aDB,gg)
+var cLB=_mz(z,'image',['class',22,'mode',1,'src',2],[],tEB,aDB,gg)
+_(fKB,cLB)
+var hMB=_mz(z,'view',['class',25,'style',1],[],tEB,aDB,gg)
+_(fKB,hMB)
+var oNB=_mz(z,'image',['bindtap',27,'class',1,'data-event-opts',2,'data-index',3,'mode',4,'src',5],[],tEB,aDB,gg)
+_(fKB,oNB)
+var cOB=_mz(z,'progress',['active',-1,'class',33,'percent',1,'strokeWidth',2],[],tEB,aDB,gg)
+_(fKB,cOB)
+_(xIB,fKB)
+}
+oHB.wxXCkey=1
+xIB.wxXCkey=1
+return eFB
+}
+oBB.wxXCkey=2
+_2z(z,5,lCB,e,s,gg,oBB,'item','index','index')
+_(o0,cAB)
+var oPB=_n('view')
+_rz(z,oPB,'class',36,e,s,gg)
+_(o0,oPB)
+var lQB=_n('view')
+_rz(z,lQB,'class',37,e,s,gg)
+var aRB=_mz(z,'view',['bindtap',38,'class',1,'data-event-opts',2],[],e,s,gg)
+var tSB=_mz(z,'image',['class',41,'mode',1,'src',2],[],e,s,gg)
+_(aRB,tSB)
+var eTB=_n('text')
+_rz(z,eTB,'class',44,e,s,gg)
+var bUB=_oz(z,45,e,s,gg)
+_(eTB,bUB)
+_(aRB,eTB)
+_(lQB,aRB)
+var oVB=_n('view')
+_rz(z,oVB,'class',46,e,s,gg)
+var xWB=_mz(z,'image',['class',47,'mode',1,'src',2],[],e,s,gg)
+_(oVB,xWB)
+var oXB=_n('view')
+_rz(z,oXB,'class',50,e,s,gg)
+var fYB=_oz(z,51,e,s,gg)
+_(oXB,fYB)
+_(oVB,oXB)
+_(lQB,oVB)
+_(o0,lQB)
+_(r,o0)
 return r
 }
 e_[x[1]]={f:m1,j:[],i:[],ti:[],ic:[]}
 d_[x[2]]={}
-d_[x[2]]["3d23bbf6"]=function(e,s,r,gg){
-var z=gz$gwx_3()
-var b=x[2]+':3d23bbf6'
-r.wxVkey=b
-gg.f=$gdc(f_["./components/wjx-edit/wjx-edit.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[2]);return}
-p_[b]=true
-try{
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:27")
-var oB=_mz(z,'view',['class',1,'style',1],[],e,s,gg)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:124")
-var xC=_n('view')
-_rz(z,xC,'class',3,e,s,gg)
-var oD=_v()
-_(xC,oD)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:block:1:165")
-var fE=function(hG,cF,oH,gg){
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:block:1:165")
-var oJ=_v()
-_(oH,oJ)
-if(_oz(z,9,hG,cF,gg)){oJ.wxVkey=1
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:textarea:1:266")
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:textarea:1:266")
-var aL=_mz(z,'textarea',['autoHeight',10,'bindfocus',1,'bindinput',2,'bindlinechange',3,'class',4,'cursorSpacing',5,'data-comkey',6,'data-eventid',7,'data-index',8,'focus',9,'maxlength',10,'placeholder',11,'value',12],[],hG,cF,gg)
-cs.pop()
-_(oJ,aL)
-cs.pop()
-}
-var lK=_v()
-_(oH,lK)
-if(_oz(z,23,hG,cF,gg)){lK.wxVkey=1
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:712")
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:712")
-var tM=_n('view')
-_rz(z,tM,'class',24,hG,cF,gg)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:image:1:781")
-var eN=_mz(z,'image',['class',25,'mode',1,'src',2],[],hG,cF,gg)
-cs.pop()
-_(tM,eN)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:864")
-var bO=_mz(z,'view',['class',28,'style',1],[],hG,cF,gg)
-cs.pop()
-_(tM,bO)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:image:1:983")
-var oP=_mz(z,'image',['bindtap',30,'class',1,'data-comkey',2,'data-eventid',3,'data-index',4,'mode',5,'src',6],[],hG,cF,gg)
-cs.pop()
-_(tM,oP)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:progress:1:1194")
-var xQ=_mz(z,'progress',['active',-1,'class',37,'percent',1,'strokeWidth',2],[],hG,cF,gg)
-cs.pop()
-_(tM,xQ)
-cs.pop()
-_(lK,tM)
-cs.pop()
-}
-oJ.wxXCkey=1
-lK.wxXCkey=1
-cs.pop()
-return oH
-}
-oD.wxXCkey=2
-_2z(z,6,fE,e,s,gg,oD,'item','index','index')
-cs.pop()
-cs.pop()
-_(oB,xC)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:1314")
-var oR=_n('view')
-_rz(z,oR,'class',40,e,s,gg)
-cs.pop()
-_(oB,oR)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:1373")
-var fS=_n('view')
-_rz(z,fS,'class',41,e,s,gg)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:1420")
-var cT=_mz(z,'view',['bindtap',42,'class',1,'data-comkey',2,'data-eventid',3],[],e,s,gg)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:image:1:1538")
-var hU=_mz(z,'image',['class',46,'mode',1,'src',2],[],e,s,gg)
-cs.pop()
-_(cT,hU)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:text:1:1639")
-var oV=_n('text')
-_rz(z,oV,'class',49,e,s,gg)
-var cW=_oz(z,50,e,s,gg)
-_(oV,cW)
-cs.pop()
-_(cT,oV)
-cs.pop()
-_(fS,cT)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:1701")
-var oX=_n('view')
-_rz(z,oX,'class',51,e,s,gg)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:image:1:1746")
-var lY=_mz(z,'image',['class',52,'mode',1,'src',2],[],e,s,gg)
-cs.pop()
-_(oX,lY)
-cs.push("./components/wjx-edit/wjx-edit.vue.wxml:view:1:1848")
-var aZ=_n('view')
-_rz(z,aZ,'class',55,e,s,gg)
-var t1=_oz(z,56,e,s,gg)
-_(aZ,t1)
-cs.pop()
-_(oX,aZ)
-cs.pop()
-_(fS,oX)
-cs.pop()
-_(oB,fS)
-cs.pop()
-_(r,oB)
-}catch(err){
-p_[b]=false
-throw err
-}
-p_[b]=false
-return r
-}
 var m2=function(e,s,r,gg){
 var z=gz$gwx_3()
+var h1B=_n('view')
+_rz(z,h1B,'class',0,e,s,gg)
+var o2B=_mz(z,'edit',['bind:__l',1,'class',1,'data-ref',2,'paddingBottom',3,'placeText',4,'vueId',5],[],e,s,gg)
+_(h1B,o2B)
+_(r,h1B)
 return r
 }
 e_[x[2]]={f:m2,j:[],i:[],ti:[],ic:[]}
 d_[x[3]]={}
-d_[x[3]]["fdfd28ca"]=function(e,s,r,gg){
-var z=gz$gwx_4()
-var b=x[3]+':fdfd28ca'
-r.wxVkey=b
-gg.f=$gdc(f_["./pages/index/index.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[3]);return}
-p_[b]=true
-try{
-cs.push("./pages/index/index.vue.wxml:view:1:82")
-var oB=_n('view')
-_rz(z,oB,'class',1,e,s,gg)
-var xC=_v()
-_(oB,xC)
-cs.push("./pages/index/index.vue.wxml:template:1:119")
-var oD=_oz(z,3,e,s,gg)
-var fE=_gd(x[3],oD,e_,d_)
-if(fE){
-var cF=_1z(z,2,e,s,gg) || {}
-var cur_globalf=gg.f
-xC.wxXCkey=3
-fE(cF,cF,xC,gg)
-gg.f=cur_globalf
-}
-else _w(oD,x[3],1,251)
-cs.pop()
-cs.pop()
-_(r,oB)
-}catch(err){
-p_[b]=false
-throw err
-}
-p_[b]=false
-return r
-}
 var m3=function(e,s,r,gg){
 var z=gz$gwx_4()
-var fE=e_[x[3]].i
-_ai(fE,x[4],e_,x[3],1,1)
-fE.pop()
+var o4B=_n('view')
+_rz(z,o4B,'style',0,e,s,gg)
+var l5B=_mz(z,'attachment',['attachmentList',1,'bind:__l',1,'bind:updateAttachmentList',2,'canUploadFile',3,'data-event-opts',4,'heaer',5,'mode',6,'showProcess',7,'uploadFileUrl',8,'vueId',9],[],e,s,gg)
+_(o4B,l5B)
+_(r,o4B)
 return r
 }
-e_[x[3]]={f:m3,j:[],i:[],ti:[x[4]],ic:[]}
-d_[x[5]]={}
-var m4=function(e,s,r,gg){
-var z=gz$gwx_5()
-var hG=e_[x[5]].i
-_ai(hG,x[6],e_,x[5],1,1)
-var oH=_v()
-_(r,oH)
-cs.push("./pages/index/index.wxml:template:2:6")
-var cI=_oz(z,1,e,s,gg)
-var oJ=_gd(x[5],cI,e_,d_)
-if(oJ){
-var lK=_1z(z,0,e,s,gg) || {}
-var cur_globalf=gg.f
-oH.wxXCkey=3
-oJ(lK,lK,oH,gg)
-gg.f=cur_globalf
-}
-else _w(cI,x[5],2,18)
-cs.pop()
-hG.pop()
-return r
-}
-e_[x[5]]={f:m4,j:[],i:[],ti:[x[6]],ic:[]}
+e_[x[3]]={f:m3,j:[],i:[],ti:[],ic:[]}
 if(path&&e_[path]){
 window.__wxml_comp_version__=0.02
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
 var main=e_[path].f
-cs=[]
 if (typeof global==="undefined")global={};global.f=$gdc(f_[path],"",1);
 if(typeof(window.__webview_engine_version__)!='undefined'&&window.__webview_engine_version__+1e-6>=0.02+1e-6&&window.__mergeData__)
 {
@@ -1546,9 +1389,7 @@ main(env,{},root,global);
 _tsd(root)
 if(typeof(window.__webview_engine_version__)=='undefined'|| window.__webview_engine_version__+1e-6<0.01+1e-6){return _ev(root);}
 }catch(err){
-console.log(cs, env);
 console.log(err)
-throw err
 }
 return root;
 }
@@ -1658,12 +1499,23 @@ setCssToHead([])();setCssToHead([[2,0]],undefined,{path:"./app.wxss"})();
 __wxAppCode__['app.wxss']=setCssToHead([[2,0]],undefined,{path:"./app.wxss"});    
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
-__wxAppCode__['pages/index/index.wxss']=setCssToHead(["wx-page.",[1],"data-v-6a1992b3 { background: #fff; }\n.",[1],"edit.",[1],"data-v-6a1992b3 { width: 100%; padding: 0 ",[0,30],"; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: ",[0,10],"; background: #fff; }\n.",[1],"edit wx-textarea.",[1],"data-v-6a1992b3 { padding: ",[0,20]," 0; width: 100%; font-size: ",[0,32],"; background: #fff; line-height: 1.24; font-family: Arial, \x22\\5B8B\\4F53\x22; }\n.",[1],"edit wx-image.",[1],"data-v-6a1992b3 { width: 100%; display: block; }\n.",[1],"edit .",[1],"img.",[1],"data-v-6a1992b3 { position: relative; margin-top: ",[0,10],"; margin-bottom: ",[0,10],"; }\n.",[1],"edit .",[1],"img .",[1],"mask.",[1],"data-v-6a1992b3 { background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - ",[0,6],"); }\n.",[1],"edit .",[1],"img .",[1],"del.",[1],"data-v-6a1992b3 { width: ",[0,80],"; height: ",[0,80],"; position: absolute; bottom: ",[0,30],"; right: ",[0,20],"; }\n.",[1],"edit-tools-flex.",[1],"data-v-6a1992b3 { width: 100%; height: ",[0,98],"; }\n.",[1],"edit-tools.",[1],"data-v-6a1992b3 { position: fixed; z-index: 1000; left: 0; bottom: 0; width: 100%; background: #fff; border-top: 0.5px solid #ccc; height: ",[0,98],"; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; box-sizing: border-box; }\n.",[1],"edit-tools .",[1],"date.",[1],"data-v-6a1992b3 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"edit-tools .",[1],"date wx-image.",[1],"data-v-6a1992b3 { width: ",[0,35],"; height: ",[0,35],"; margin-left: ",[0,30],"; }\n.",[1],"edit-tools .",[1],"date .",[1],"date-value.",[1],"data-v-6a1992b3 { font-size: ",[0,24],"; color: #666666; margin-left: ",[0,24],"; padding-right: ",[0,26],"; border-right: 0.5px solid #ccc; }\n.",[1],"edit-tools .",[1],"single.",[1],"data-v-6a1992b3 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-left: ",[0,39],"; }\n.",[1],"edit-tools .",[1],"single wx-image.",[1],"data-v-6a1992b3 { width: ",[0,35],"; height: ",[0,35],"; }\n.",[1],"edit-tools .",[1],"single wx-text.",[1],"data-v-6a1992b3 { font-size: ",[0,30],"; color: #999; margin-left: ",[0,20],"; }\n.",[1],"edit-tools .",[1],"location.",[1],"data-v-6a1992b3 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; position: absolute; right: ",[0,30],"; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding: 0 ",[0,20],"; height: ",[0,51],"; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; background: #f0f0f0; border-radius: ",[0,50],"; }\n.",[1],"edit-tools .",[1],"location wx-image.",[1],"data-v-6a1992b3 { width: ",[0,27],"; height: ",[0,33],"; }\n.",[1],"edit-tools .",[1],"location .",[1],"city.",[1],"data-v-6a1992b3 { color: #666666; font-size: ",[0,24],"; margin-left: ",[0,10],"; }\n",],undefined,{path:"./pages/index/index.wxss"});    
+__wxAppCode__['components/jin-attachment/jin-attachment.wxss']=setCssToHead([".",[1],"imgs.",[1],"data-v-73428cf8 { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; width: calc(100% + ",[0,15],"); }\n.",[1],"imgs .",[1],"file.",[1],"data-v-73428cf8 { min-width: calc(100% - ",[0,15],"); border: 1px solid #ccc; border-radius: ",[0,10],"; box-sizing: border-box; margin-top: ",[0,20],"; position: relative; }\n.",[1],"imgs .",[1],"file .",[1],"noImg.",[1],"data-v-73428cf8 { padding: ",[0,20],"; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; text-align: left; width: 100%; font-size: ",[0,26],"; color: #999; word-break: break-all; box-sizing: border-box; }\n.",[1],"imgs wx-progress.",[1],"data-v-73428cf8 { margin-top: ",[0,-6],"; border-radius: ",[0,20],"; }\n.",[1],"imgs .",[1],"del.",[1],"data-v-73428cf8 { position: absolute; width: ",[0,35],"; height: ",[0,35],"; background: #f56c6c; color: #fff; top: 0; text-align: center; right: 0; line-height: ",[0,35],"; font-size: ",[0,30],"; z-index: 100; }\n.",[1],"imgs .",[1],"single.",[1],"data-v-73428cf8 { width: ",[0,125],"; height: ",[0,150],"; border: 1px solid #ccc; border-radius: ",[0,10],"; margin-top: ",[0,20],"; margin-right: ",[0,12],"; position: relative; }\n.",[1],"imgs .",[1],"single.",[1],"addNew.",[1],"data-v-73428cf8 { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }\n.",[1],"imgs .",[1],"single.",[1],"addNew wx-text.",[1],"data-v-73428cf8 { font-size: ",[0,50],"; color: #999; }\n.",[1],"imgs .",[1],"single wx-image.",[1],"data-v-73428cf8 { width: 100%; height: 100%; display: block; }\n",],undefined,{path:"./components/jin-attachment/jin-attachment.wxss"});    
+__wxAppCode__['components/jin-attachment/jin-attachment.wxml']=$gwx('./components/jin-attachment/jin-attachment.wxml');
+
+__wxAppCode__['components/wjx-edit/wjx-edit.wxss']=setCssToHead(["wx-page.",[1],"data-v-8c389fd0 { background: #fff; }\n.",[1],"edit.",[1],"data-v-8c389fd0 { width: 100%; padding: 0 ",[0,30],"; box-sizing: border-box; padding-top: ",[0,10],"; background: #fff; }\n.",[1],"edit wx-textarea.",[1],"data-v-8c389fd0 { padding: ",[0,20]," 0; width: 100%; font-size: ",[0,32],"; background: #fff; line-height: 1.24; font-family: Arial, \x22\\5B8B\\4F53\x22; }\n.",[1],"edit wx-image.",[1],"data-v-8c389fd0 { width: 100%; display: block; }\n.",[1],"edit .",[1],"img.",[1],"data-v-8c389fd0 { position: relative; margin-top: ",[0,10],"; margin-bottom: ",[0,10],"; }\n.",[1],"edit .",[1],"img .",[1],"mask.",[1],"data-v-8c389fd0 { background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - ",[0,6],"); }\n.",[1],"edit .",[1],"img .",[1],"del.",[1],"data-v-8c389fd0 { width: ",[0,80],"; height: ",[0,80],"; position: absolute; bottom: ",[0,30],"; right: ",[0,20],"; }\n.",[1],"edit-tools-flex.",[1],"data-v-8c389fd0 { width: 100%; height: ",[0,98],"; }\n.",[1],"edit-tools.",[1],"data-v-8c389fd0 { position: fixed; z-index: 1000; left: 0; bottom: 0; width: 100%; background: #fff; border-top: 0.5px solid #ccc; height: ",[0,98],"; -webkit-box-align: center; -webkit-align-items: center; align-items: center; display: -webkit-box; display: -webkit-flex; display: flex; box-sizing: border-box; }\n.",[1],"edit-tools .",[1],"date.",[1],"data-v-8c389fd0 { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }\n.",[1],"edit-tools .",[1],"date wx-image.",[1],"data-v-8c389fd0 { width: ",[0,35],"; height: ",[0,35],"; margin-left: ",[0,30],"; }\n.",[1],"edit-tools .",[1],"date .",[1],"date-value.",[1],"data-v-8c389fd0 { font-size: ",[0,24],"; color: #666666; margin-left: ",[0,24],"; padding-right: ",[0,26],"; border-right: 0.5px solid #ccc; }\n.",[1],"edit-tools .",[1],"single.",[1],"data-v-8c389fd0 { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; margin-left: ",[0,39],"; }\n.",[1],"edit-tools .",[1],"single wx-image.",[1],"data-v-8c389fd0 { width: ",[0,35],"; height: ",[0,35],"; }\n.",[1],"edit-tools .",[1],"single wx-text.",[1],"data-v-8c389fd0 { font-size: ",[0,30],"; color: #999; margin-left: ",[0,20],"; }\n.",[1],"edit-tools .",[1],"location.",[1],"data-v-8c389fd0 { display: -webkit-box; display: -webkit-flex; display: flex; position: absolute; right: ",[0,30],"; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); padding: 0 ",[0,20],"; height: ",[0,51],"; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; align-items: center; background: #f0f0f0; border-radius: ",[0,50],"; }\n.",[1],"edit-tools .",[1],"location wx-image.",[1],"data-v-8c389fd0 { width: ",[0,27],"; height: ",[0,33],"; }\n.",[1],"edit-tools .",[1],"location .",[1],"city.",[1],"data-v-8c389fd0 { color: #666666; font-size: ",[0,24],"; margin-left: ",[0,10],"; }\n",],undefined,{path:"./components/wjx-edit/wjx-edit.wxss"});    
+__wxAppCode__['components/wjx-edit/wjx-edit.wxml']=$gwx('./components/wjx-edit/wjx-edit.wxml');
+
+__wxAppCode__['pages/index/index.wxss']=undefined;    
 __wxAppCode__['pages/index/index.wxml']=$gwx('./pages/index/index.wxml');
+
+__wxAppCode__['pages/jin-attachment/index.wxss']=undefined;    
+__wxAppCode__['pages/jin-attachment/index.wxml']=$gwx('./pages/jin-attachment/index.wxml');
 
 ;var __pageFrameEndTime__ = Date.now();
 (function() {
-       plus.webview.getLaunchWebview().evalJS('__uniAppViewReadyCallback__("' + plus.webview.currentWebview()
-           .id + '")')
+        window.UniLaunchWebviewReady = function(isWebviewReady){
+          // !isWebviewReady && console.log('launchWebview fallback ready')
+          plus.webview.postMessageToUniNView({type: 'UniWebviewReady-' + plus.webview.currentWebview().id}, '__uniapp__service');
+        }
+        UniLaunchWebviewReady(true);
 })();
-

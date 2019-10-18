@@ -11,16 +11,20 @@
     "code": "100"
   },
   "description": "",
-  "launch_path": "__uniappservice.html",
+  "launch_path": "__uniappview.html",
   "developer": {
     "name": "",
     "email": "",
     "url": ""
   },
-  "permissions": {},
+  "permissions": {
+    "UniNView": {
+      "description": "UniNView原生渲染"
+    }
+  },
   "plus": {
     "useragent": {
-      "value": "uni-app appservice",
+      "value": "uni-app",
       "concatenate": true
     },
     "splashscreen": {
@@ -31,7 +35,10 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always"
+      "render": "always",
+      "id": "1",
+      "kernel": "WKWebview",
+      "uni-app": "auto"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -74,10 +81,29 @@
         }
       }
     },
+    "nativePlugins": {
+      "chuck-filemanager": {
+        "__plugin_info__": {
+          "name": "chuck-filemanager - [试用版，仅用于自定义调试基座]",
+          "description": "调用系统文件管理器返回 文件绝对路径",
+          "platforms": "Android",
+          "url": "https://ext.dcloud.net.cn/plugin?id=680",
+          "android_package_name": "",
+          "ios_bundle_id": "",
+          "isCloud": true,
+          "bought": 0,
+          "pid": "680",
+          "parameters": {}
+        }
+      }
+    },
+    "arguments": "{\"name\":\"上传附件\",\"query\":\"\",\"id\":0,\"pathName\":\"pages/jin-attachment/index\"}",
     "allowsInlineMediaPlayback": true,
     "uni-app": {
-      "compilerVersion": "1.8.1",
-      "control": "webview"
+      "compilerVersion": "2.3.4",
+      "control": "v8",
+      "nvueCompiler": "weex",
+      "renderer": "auto"
     }
   }
 }

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "edit": "/components/wjx-edit/wjx-edit"
+  }
+}
