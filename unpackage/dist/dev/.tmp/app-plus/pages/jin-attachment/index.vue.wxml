@@ -1,1 +1,0 @@
-<import src="/components/jin-attachment/jin-attachment.vue.wxml" /><template name="6a91bf44"><view style="padding: 30rpx;" class="_view M6a91bf44"><template mode="create" binduploadSuccess="handleProxy" data-eventid="{{'6a91bf44-0'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'6a91bf44-0'],$root}}" is="671acf65"></template></view></template>

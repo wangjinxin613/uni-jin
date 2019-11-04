@@ -1,1 +1,0 @@
-<import src="/components/wjx-edit/wjx-edit.vue.wxml" /><template name="fdfd28ca"><view class="_view Mfdfd28ca content"><template paddingBottom="20" ref="edit" placeText="写点什么吧..." data="{{...$root['0'], ...$root[$kk+'fdfd28ca-0'],$root}}" is="3d23bbf6"></template></view></template>

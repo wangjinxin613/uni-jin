@@ -1,1 +1,0 @@
-<view class="content"><edit class="vue-ref" vue-id="1" paddingBottom="20" placeText="写点什么吧..." data-ref="edit" bind:__l="__l"></edit></view>

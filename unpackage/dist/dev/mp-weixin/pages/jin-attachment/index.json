@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "上传附件",
-  "usingComponents": {
-    "attachment": "/components/jin-attachment/jin-attachment"
-  }
-}
