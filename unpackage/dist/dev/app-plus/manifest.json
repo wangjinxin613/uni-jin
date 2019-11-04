@@ -11,20 +11,16 @@
     "code": "100"
   },
   "description": "",
-  "launch_path": "__uniappview.html",
+  "launch_path": "__uniappservice.html",
   "developer": {
     "name": "",
     "email": "",
     "url": ""
   },
-  "permissions": {
-    "UniNView": {
-      "description": "UniNView原生渲染"
-    }
-  },
+  "permissions": {},
   "plus": {
     "useragent": {
-      "value": "uni-app",
+      "value": "uni-app appservice",
       "concatenate": true
     },
     "splashscreen": {
@@ -35,10 +31,7 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always",
-      "id": "1",
-      "kernel": "WKWebview",
-      "uni-app": "auto"
+      "render": "always"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -100,8 +93,8 @@
     "arguments": "{\"name\":\"上传附件\",\"query\":\"\",\"id\":0,\"pathName\":\"pages/jin-attachment/index\"}",
     "allowsInlineMediaPlayback": true,
     "uni-app": {
-      "compilerVersion": "2.3.4",
-      "control": "v8",
+      "compilerVersion": "2.2.2",
+      "control": "webview",
       "nvueCompiler": "weex",
       "renderer": "auto"
     }

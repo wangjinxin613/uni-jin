@@ -1,6 +1,6 @@
 <template>
 	<view style="padding: 30rpx;">
-		<Attachment mode="create" :canUploadFile="true" :uploadFileUrl="uploadFileUrl" :heaer="header" :showProcess="true" :attachmentList.sync="attachmentList"></Attachment>
+		<Attachment mode="create" :canUploadFile="true" :uploadFileUrl="uploadFileUrl" :heaer="header" :showProcess="true" :attachmentList.sync="attachmentList" @uploadSuccess="uploadSuccess"></Attachment>
 	</view>
 </template>
 
@@ -9,7 +9,7 @@ import Attachment from '../../components/jin-attachment/jin-attachment.vue';
 export default {
 	data() {
 		return {
-			uploadFileUrl: '', //你的后端接收文件地址
+			uploadFileUrl: 'http://localhost:8080', //替换成你的后端接收文件地址
 			header: {
 				// 如果需要header，请上传
 			},
@@ -49,7 +49,24 @@ export default {
 	},
 	components: {
 		Attachment
+	},
+	methods:{
+		uploadSuccess(result) {
+			if(result.statusCode == 200) {
+				//上传成功的回调处理
+				uni.showToast({
+					title: '上传成功',
+					icon: 'none'
+				});
+			}else{
+				uni.showToast({
+					title: '上传失败',
+					icon: 'none'
+				});
+			}
+		}
 	}
+	
 }
 </script>
 

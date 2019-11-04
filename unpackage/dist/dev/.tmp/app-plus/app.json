@@ -9,6 +9,7 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
+  "usingComponents": {},
   "nvueCompiler": "weex",
   "renderer": "auto",
   "splashscreen": {
@@ -16,6 +17,5 @@
     "autoclose": false
   },
   "appname": "wjx-uni",
-  "compilerVersion": "2.3.4",
-  "usingComponents": {}
+  "compilerVersion": "2.2.2"
 }

@@ -9,6 +9,9 @@
 7. 可设置上传的图片数量
 8. APP端可以上传文件
 9. 可配置是否显示上传进度条
+10. 微信端可以选择文件，利用接口wx.chooseMessageFile
+
+`已测试安卓端、微信小程序端、H5端`
 
 ### 使用说明
 拷贝该组件到`components`目录下之后  
@@ -44,6 +47,7 @@ showProcess  | `Boolean` | true | 是否显示进度，默认显示 |
 header  | `Object` | null | 上传图片到服务器时，HTTP 请求 Header |
 limit  | `Number` | null | 限制可上传的图片数量,图片最大上传数量 |
 fileKeyName  | `String` | 'file' | 用于在服务端通过自定义key值获取该文件数据|
+canUploadFile | `Boolean` | false | 是否能上传文件，只有微信端和安卓版设置为true时有效
 
 ### `attachmentList`参数的 `Object`说明
 属性名  | 类型| 默认值  | 说明|
@@ -53,4 +57,90 @@ url | `String` | null  | 文件或者图片的url地址
 fileName | `String` | null  | 文件名
 process | `Number` | null  | 文件或图片的上传进度
 
-> 如遇问题，欢迎评论指出，作者微信 wangjinxin613
+### 自定义事件说明
+事件名称  | 说明| 返回参数 |
+--------- | --------|--------- |
+uploadSuccess | 图片上传成功回调函数，每选择一个或者多个附件后会立即上传至后端服务器| 返回的参数与 uni.uploadFile接口参数一致 |
+
+
+### demo示例
+
+``` javascript
+<template>
+	<view style="padding: 30rpx;">
+		<Attachment mode="create" :canUploadFile="true" :uploadFileUrl="uploadFileUrl" :heaer="header" :showProcess="true" :attachmentList.sync="attachmentList" @uploadSuccess="uploadSuccess"></Attachment>
+	</view>
+</template>
+
+<script>
+import Attachment from '../../components/jin-attachment/jin-attachment.vue';
+export default {
+	data() {
+		return {
+			uploadFileUrl: 'http://localhost:8080', //替换成你的后端接收文件地址
+			header: {
+				// 如果需要header，请上传
+			},
+			attachmentList: [
+				{
+					url: 'https://avatar-static.segmentfault.com/151/147/1511478734-593e62d4d3076_big64',
+					type: 'image',
+					fileName: 'xxx.png'
+				},
+				{
+					url: 'https://avatar-static.segmentfault.com/820/689/820689728-59e9b54a71fdc_huge256',
+					type: 'image',
+					fileName: 'xxx.png'
+				},
+				{
+					url: 'https://avatar-static.segmentfault.com/820/689/820689728-59e9b54a71fdc_huge256',
+					type: 'image',
+					fileName: 'xxx.png'
+				},
+				{
+					url: 'https://avatar-static.segmentfault.com/820/689/820689728-59e9b54a71fdc_huge256',
+					type: 'image',
+					fileName: 'xxx.png'
+				},
+				{
+					url: 'https://avatar-static.segmentfault.com/820/689/820689728-59e9b54a71fdc_huge256',
+					type: 'image',
+					fileName: 'xxx.png'
+				},
+				{
+					type: 'file',
+					fileName: '这个组件真棒.doc',
+					url: 'https://avatar-static.segmentfault.com/820/689/820689728-59e9b54a71fdc_huge256'
+				}
+			]
+		}
+	},
+	components: {
+		Attachment
+	},
+	methods:{
+		uploadSuccess(result) {
+			if(result.statusCode == 200) {
+				//上传成功的回调处理
+				uni.showToast({
+					title: '上传成功',
+					icon: 'none'
+				});
+			}else{
+				uni.showToast({
+					title: '上传失败',
+					icon: 'none'
+				});
+			}
+		}
+	}
+	
+}
+</script>
+
+<style>
+</style>
+
+```
+<br>
+> 如遇问题，欢迎评论指出，作者微信 wangjinxin613，添加好友时请备注 jin-attachment 

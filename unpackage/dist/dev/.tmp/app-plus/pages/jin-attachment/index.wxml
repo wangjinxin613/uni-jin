@@ -1,1 +1,2 @@
-<view style="padding:30rpx;"><attachment vue-id="1" mode="create" canUploadFile="{{true}}" uploadFileUrl="{{uploadFileUrl}}" heaer="{{header}}" showProcess="{{true}}" attachmentList="{{attachmentList}}" data-event-opts="{{[['^updateAttachmentList',[['__set_sync',['$0','attachmentList','$event'],['']]]],['^updateAttachmentList',[['__set_sync',['$0','attachmentList','$event'],['']]]]]}}" bind:updateAttachmentList="__e" bind:__l="__l"></attachment></view>
+<import src="./index.vue.wxml" />
+    <template is="6a91bf44" data="{{ ...$root['0'], $root }}"/>
