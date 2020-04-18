@@ -1,7 +1,22 @@
-一个uni-app的组件
+### 一些uni-app的组件集合
 
 目前实现的有
 
-1.富文本编辑器组件
+1. js实现富文本编辑器组件 wjx-edit（被废弃）
 
-2.附件上传组件
+[链接](https://github.com/wangjinxin613/uni-jin/tree/master/components/wjx-edit)
+
+此组件已被废弃，可使用jin-edit
+
+2. 附件上传组件 jin-attachment
+
+[链接](https://github.com/wangjinxin613/uni-jin/tree/master/components/jin-attachment)
+
+3. 基于editor的富文本编辑器，适用于微信小程序、app端和H5 jin-edit
+
+[链接](https://github.com/wangjinxin613/uni-jin/tree/master/components/jin-edit)
+
+4. 图标组件 jin-icons
+
+
+> 作者微信：wangjinxin613，一个前端程序员，欢迎交流

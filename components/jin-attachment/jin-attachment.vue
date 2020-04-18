@@ -170,7 +170,7 @@
 
 				if (!canUploadFile) {
 					var temps = await uni.chooseImage({
-						count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - limit,
+						count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - this.limit,
 						sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 						sourceType: ['album'] //从相册选择
 					});
@@ -246,7 +246,7 @@
 						url: this.uploadFileUrl,
 						filePath: path,
 						name: this.fileKeyName,
-						headers: this.header,
+						header: this.header,
 						success: res => {
 							// 上传完成后处理
 							this.$emit('uploadSuccess', res);

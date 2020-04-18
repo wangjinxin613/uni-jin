@@ -63,7 +63,8 @@
                     "parameters" : {}
                 }
             }
-        }
+        },
+        "compilerVersion" : 3
     },
     /* SDK配置 */
     "quickapp" : {},
