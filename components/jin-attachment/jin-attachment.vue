@@ -16,7 +16,7 @@
 				<view class="del" @tap="deleteItem(key)">×</view>
 			</view>
 			<!-- add button -->
-			<view v-if="mode == 'create'" class="single addNew" @click="chooseFile"><text class="cuIcon-add">+</text></view>
+			<view v-if="mode == 'create' && list.length < limit" class="single addNew" @click="chooseFile"><text class="cuIcon-add">+</text></view>
 		</view>
 	</view>
 </template>
@@ -186,7 +186,7 @@
 					})
 					if (res[1].tapIndex == 0) {
 						var temps = await uni.chooseImage({
-							count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - limit,
+							count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - this.limit,
 							sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 							sourceType: ['album'] //从相册选择
 						});
@@ -199,7 +199,7 @@
 						//微信从客户端选择文件
 						var temps = await new Promise((resolve, reject) => {
 							wx.chooseMessageFile({
-								count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - limit,
+								count: this.limit == null || this.limit - this.list.length > 9 ? 9 : 9 - this.limit,
 								type: 'file',
 								success(res) {
 									// tempFilePath可以作为img标签的src属性显示图片
