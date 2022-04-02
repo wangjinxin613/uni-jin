@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<jinEdit placeholder="请输入内容" @editOk="editOk" uploadFileUrl="/#"></jinEdit> 
+		<jinEdit placeholder="请输入内容" @editOk="editOk" uploadFileUrl="https://jsonplaceholder.typicode.com/posts/" ></jinEdit> 
 	</view>
 </template>
 

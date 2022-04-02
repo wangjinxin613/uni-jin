@@ -1,7 +1,5 @@
 <template>
-	<view class="container" :style="{
-		paddingBottom: showMoreTool ? '220rpx' : '120rpx'
-	}"> 
+	<view class="container" :style="{height: height}"> 
 		<editor
 			class="ql-container"
 			:placeholder="placeholder"
@@ -17,14 +15,6 @@
 		></editor>   
 		<!-- 操作工具 -->
 		<view class="tool-view" > 
-			<view class="tool">
-				<jinIcon class="single" type="&#xe6f3;" font-size="44rpx" title="插入图片" @click="insertImage"></jinIcon>
-				<jinIcon class="single" type="&#xe6f9;" font-size="44rpx" title="修改文字样式" @click="showMore" :color="showMoreTool ? activeColor : '#666666'"></jinIcon>
-				<jinIcon class="single" type="&#xe6eb;" font-size="44rpx" title="分割线" @click="insertDivider"></jinIcon>
-				<jinIcon class="single" type="&#xe6e8;" font-size="44rpx" title="撤销" @click="undo"></jinIcon>
-				<jinIcon class="single" type="&#xe705;" font-size="44rpx" title="重做" @click="redo"></jinIcon>
-				<jinIcon class="single" type="&#xeb8a;" font-size="44rpx" title="设置" @click="showSetting"></jinIcon>
-			</view>
 			<!-- 文字相关操作 -->
 			<view class="font-more" :style="{ height: showMoreTool ? '100rpx' : 0 }">
 				<jinIcon class="single" type="&#xe6e7;" font-size="44rpx" title="加粗" @click="setBold" :color="showBold ? activeColor : '#666666'"></jinIcon>
@@ -42,8 +32,16 @@
 				</view>
 				<view class="single" @click="release(false)">
 					<jinIcon class="icon" type="&#xe655;" ></jinIcon>
-					<view>私密保存</view>
+					<view>暂时保存</view>
 				</view>
+			</view>
+			<view class="tool">
+				<jinIcon class="single" type="&#xe6f3;" font-size="44rpx" title="插入图片" @click="insertImage"></jinIcon>
+				<jinIcon class="single" type="&#xe6f9;" font-size="44rpx" title="修改文字样式" @click="showMore" :color="showMoreTool ? activeColor : '#666666'"></jinIcon>
+				<jinIcon class="single" type="&#xe6eb;" font-size="44rpx" title="分割线" @click="insertDivider"></jinIcon>
+				<jinIcon class="single" type="&#xe6e8;" font-size="44rpx" title="撤销" @click="undo"></jinIcon>
+				<jinIcon class="single" type="&#xe705;" font-size="44rpx" title="重做" @click="redo"></jinIcon>
+				<jinIcon class="single" type="&#xeb8a;" font-size="44rpx" title="设置" @click="showSetting"></jinIcon>
 			</view>
 		</view>
 	</view>
@@ -90,6 +88,11 @@ export default {
 		// 初始化html
 		html: {
 			type: String
+		},
+		// 整个控件的高度
+		height: {
+			type: String,
+			default: '100vh'
 		}
 	},
 	computed:{
@@ -111,8 +114,7 @@ export default {
 	components: {
 		jinIcon
 	},
-	created() {
-		
+	mounted() {
 	},
 	methods: {
 		onEditorReady(e) {
@@ -145,6 +147,7 @@ export default {
 						title: '正在上传中...'
 					})
 					for (let temp of tempFilePaths) {
+						console.log(88, temp);
 						// 图片上传服务器
 						await uni.uploadFile({
 							url: this.uploadFileUrl,
@@ -160,12 +163,12 @@ export default {
 								});
 								uni.hideLoading()
 							},
-							
 						});
 					}
 				}
 			});
 		},
+		/// 插入分割线
 		insertDivider() {
 			this.editorCtx.insertDivider();
 		},
@@ -232,11 +235,9 @@ export default {
 		showSetting() {
 			this.showSettingLayer = !this.showSettingLayer;
 		},
-		async editFocus() {
-			
+		async editFocus(e) {
 		},
-		editBlur() {
-			
+		editBlur(e) {
 		},
 		release(isPublic) {
 			this.showSettingLayer = false;
@@ -255,24 +256,30 @@ export default {
 
 <style scoped>
 .container {
-	padding: 30rpx 0;
 	box-sizing: border-box;
-	padding-bottom: 120rpx;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-sizing: border-box;
+	/* padding-top: 30rpx; */
 }
 
 .ql-container {
-	line-height: 160%;
+	line-height: 150%;
 	font-size: 34rpx;
-	width: calc(100% - 60rpx); 
-	height: auto;
+	width: 100%; 
+	background: #fff;
+	width: calc(100% - 60rpx);
 	margin: 0 auto;
+	flex: 1;
+	box-sizing: border-box;
+	margin-top: 30rpx;
+	/* padding-bottom: 5rpx; */
 } 
 .tool-view{
 	width: 100vw;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	
+	background: #eee;
+	/* margin-top: 20px; */
 }
 .tool {
 	height: 100rpx;
@@ -280,13 +287,9 @@ export default {
 	align-items: center;
 	justify-content: space-around;
 	width: 100%;
-	background: #eee;
 }
 
 .font-more {
-	position: absolute;
-	left: 0;
-	bottom: 100rpx;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
