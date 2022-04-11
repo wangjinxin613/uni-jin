@@ -55,6 +55,7 @@ uploadFileUrl | String | '#' | 图片上传的服务器地址
 fileKeyName | String | 'file' | 图片上传时的name
 header | Object | - | 图片上传http请求的header
 html | String | - | 初始化的html 
+height | String | - | 组件高度 
 
 ### 方法
 
@@ -63,3 +64,17 @@ html | String | - | 初始化的html
 editOk | e={html,text,delta,isPublic} | 点击发布按钮触发	
 
 以上
+
+### 如何解决编辑器聚焦时，底部操作栏无法附在软键盘上方的问题
+
+可在pages.json中加入如下配置：
+
+```javascript
+"globalStyle": {
+		"app-plus": {
+			"softinputMode": "adjustResize"
+		}
+	},
+```
+
+[如有问题，可在此提问](https://github.com/wangjinxin613/uni-jin/issues)
