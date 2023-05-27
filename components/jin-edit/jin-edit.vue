@@ -95,6 +95,13 @@ export default {
 			default: '100vh'
 		}
 	},
+	watch: {  
+		html(nv, ov) {  
+			this.editorCtx.setContents({  
+				html: nv  
+			});  
+		},  
+	},
 	computed:{
 		
 	},
